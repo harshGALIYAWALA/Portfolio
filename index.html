@@ -1,38 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harsh - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projects.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="contact-form.js"></script>
 </head>
+
 <body>
-    <!-- Header Section -->
+    <!-- Modern Header to Match Hero Section -->
     <header class="header">
         <div class="container">
-            <div class="logo">Harsh Galiyawala</div>
+            <a href="#home" class="logo">
+                <span class="logo-text">Harsh Galiyawala</span>
+                <span class="logo-highlight"></span>
+            </a>
+
             <nav class="nav">
                 <ul class="nav-list">
-                    <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
                 </ul>
             </nav>
+
+            <div class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
     </header>
 
+    <!-- Overlay for mobile menu -->
+    <div class="overlay"></div>
+
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-particles" id="particles-js"></div>
         <div class="container">
             <div class="hero-content">
-                <h1>Hi, I'm Harsh</h1>
-                <p>Android Developer & UI/UX Designer creating beautiful and functional digital experiences</p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn">View My Work</a>
-                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                <div class="hero-text">
+                    <div class="hero-intro">
+                        <span class="greeting">Hello World, I'm</span>
+                    </div>
+                    <h1 class="hero-name">Harsh<span class="accent-dot">.</span></h1>
+                    <div class="hero-title">
+                        <div class="hero-title-wrapper">
+                            <div class="hero-title-item">Android Developer</div>
+                            <div class="hero-title-item">UI/UX Designer</div>
+                            <div class="hero-title-item">Problem Solver</div>
+                            <div class="hero-title-item">Digital Craftsman</div>
+                        </div>
+                    </div>
+                    <p class="hero-description">I craft intuitive mobile experiences and design beautiful interfaces
+                        that solve real-world problems.</p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <span>Contact Me</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-image-wrapper">
+                        <div class="hero-shape"></div>
+                        <img src="photo_2.jpg" alt="Harsh - Android Developer" class="profile-image" />
+                        <div class="experience-badge">
+                            <span class="exp-years">20</span>
+                            <span class="exp-text">year old<br></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrow">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="tech-stack">
+            <div class="tech-stack-container">
+                <div class="tech-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <span>Android</span>
+                </div>
+                <div class="tech-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                    <span>Kotlin</span>
+                </div>
+                <div class="tech-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M16.2 7.8l-2 6.3-6.4 2.1 2-6.3z"></path>
+                    </svg>
+                    <span>Figma</span>
+                </div>
+                <div class="tech-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20M2 8V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6">
+                        </path>
+                        <line x1="2" y1="20" x2="2" y2="20"></line>
+                    </svg>
+                    <span>UI/UX</span>
                 </div>
             </div>
         </div>
@@ -41,19 +157,37 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2>About Me</h2>
+            <div class="section-header">
+                <span class="section-number">01.</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+
             <div class="about-content">
                 <div class="about-img">
+                    <div class="img-border"></div>
                     <img src="photo.jpg" alt="Harsh's profile photo">
+                    <div class="img-overlay"></div>
                 </div>
+
                 <div class="about-text">
                     <h3>Who I Am</h3>
-                    <p>I'm a passionate Android developer and designer, driven by a desire to create purposeful and user-centric mobile experiences. My journey into development began one years ago, and over time, I’ve evolved into someone who doesn’t just build apps but crafts digital solutions with intent. Whether it’s working on location-based safety features or building clean, responsive UIs, I approach every project with a mix of technical precision and design sensibility.</p>
+                    <p>I'm a passionate <span class="highlight">Android developer and designer</span>, driven by a
+                        desire to create purposeful and user-centric mobile experiences. My journey into development
+                        began one year ago, and over time, I've evolved into someone who doesn't just build apps but
+                        crafts digital solutions with intent.</p>
 
-                    <p>I strongly believe in continuous growth and self-reliance. Despite having the privilege of financial security, I’ve chosen to earn my path through hard work, curiosity, and discipline. I constantly push myself to go beyond comfort zones — learning new technologies, refining my skills, and challenging what I can build. From Android fundamentals to integrating advanced features like real-time location tracking and WebSocket communication, I treat each challenge as an opportunity to get 1% better every day.</p>
+                    <p>I strongly believe in continuous growth and self-reliance. Despite having the privilege of
+                        financial security, I've chosen to earn my path through <span class="highlight">hard work,
+                            curiosity, and discipline</span>. I constantly push myself to go beyond comfort zones —
+                        learning new technologies, refining my skills, and challenging what I can build.</p>
 
-                    <p>Outside of coding, I reflect deeply on personal development and how to make the most of my time. I’m not one to be distracted by fleeting pleasures; instead, I channel my energy into long-term growth — exploring tech, contributing to impactful ideas, and even finding peace in nature through activities like hiking. My mindset is focused, my goals are clear, and Android development is where I’m building both my skills and my future.</p>
-                    <a href="https://www.linkedin.com/in/harsh-galiyawala-ba0429289/" target="_blank" class="btn">Let's Connect</a>
+                    <p>Outside of coding, I reflect deeply on personal development and how to make the most of my time.
+                        I'm not one to be distracted by fleeting pleasures; instead, I channel my energy into long-term
+                        growth — exploring tech, contributing to impactful ideas, and finding peace in nature through
+                        activities like hiking.</p>
+                    <a href="https://www.linkedin.com/in/harsh-galiyawala-ba0429289/" target="_blank" class="btn">Let's
+                        Connect</a>
                 </div>
             </div>
         </div>
@@ -69,156 +203,208 @@
                         <i class="fa-brands fa-android"></i>
                     </div>
                     <h3>Android Development</h3>
-                    <p>Skilled in Java, Kotlin, and Android SDK with experience using Jetpack libraries to create efficient and user-friendly mobile applications.</p>
+                    <p>Skilled in Java, Kotlin, and Android SDK with experience using Jetpack libraries to create
+                        efficient and user-friendly mobile applications.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-paint-brush"></i>
                     </div>
                     <h3>UI/UX Design</h3>
-                    <p>Creating intuitive user interfaces with a focus on usability, accessibility, and aesthetics using tools like Figma</p>
+                    <p>Creating intuitive user interfaces with a focus on usability, accessibility, and aesthetics using
+                        tools like Figma and Adobe XD.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-database"></i>
                     </div>
                     <h3>Backend Development</h3>
-                    <p>Experience with Node.js, Express, MongoDB, and SQL databases to build robust server-side applications.</p>
+                    <p>Experience with Node.js, Express, MongoDB, and SQL databases to build robust server-side
+                        applications and APIs.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
                     <h3>Responsive Design</h3>
-                    <p>Creating Apps that work flawlessly across all devices, from tables to mobile phones.</p>
+                    <p>Creating applications that work flawlessly across all devices, from desktop to mobile phones with
+                        fluid layouts.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-fire"></i>
                     </div>
                     <h3>Firebase</h3>
-                    <p>Integrating Firebase services like Realtime Database, Firestore, Auth, and Cloud Messaging for scalable mobile apps</p>
+                    <p>Integrating Firebase services like Realtime Database, Firestore, Auth, and Cloud Messaging for
+                        scalable mobile applications.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-rocket"></i>
                     </div>
                     <h3>Performance Optimization</h3>
-                    <p>Improving app speed and responsiveness by optimizing code, managing memory, and following Android best practices.</p>
+                    <p>Improving app speed and responsiveness by optimizing code, managing memory, and following
+                        industry
+                        best practices.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Particles.js Container -->
+    <div id="particles-js"></div>
+
     <!-- Projects Section -->
-<section id="projects" class="projects">
-    <div class="container">
-        <h2>My Projects</h2>
-        
-        <div class="projects-grid">
-            <!-- Project 1 -->
-            <div class="project-card">
-                <div class="device-mockup">
-                    <div class="phone-frame">
-                        <div class="phone-screen">
-                            <img src="project_1.jpg" alt="SOS Emergency App" class="app-screenshot">
-                        </div>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <h3>Safe Track</h3>
-                    <div class="project-tags">
-                        <span class="project-tag">Kotlin</span>
-                        <span class="project-tag">Google Maps API</span>
-                        <span class="project-tag">Node.js</span>
-                        <span class="project-tag">Express.js</span>
-                        <span class="project-tag">MongoDB</span>
-                        <span class="project-tag">Firebase</span>
-                        <span class="project-tag">WebSocket</span>
-                        <span class="project-tag">real-time GPS</span>
-                    </div>
-                    <p>Safe Track is designed to provide enhanced security and peace of mind for women while traveling. It features real-time location tracking, route monitoring, and emergency alerts to trusted contacts. The app includes a "geoguessing" feature that tracks the user's route and triggers alerts if they deviate or remain stationary for too long. Additional safety features include a "Time Threshold Alert" for delays, smart route deviation detection, and an emergency response system if the user is unresponsive. It also offers a "Fake Shutdown Mode" to secretly send emergency data in case of an emergency.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/harshGALIYAWALA/Safe-Track" target="_blank" class="btn"><i class="fab fa-google-play"></i> View on Play Store</a>
-                        <a href="https://github.com/harshGALIYAWALA/Safe-Track" target="_blank" class="btn-outline"><i class="fab fa-github"></i> Source Code</a>
-                    </div>
-                </div>
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-heading">
+                <h2><span class="section-number">04.</span> My Projects</h2>
             </div>
 
-            <!-- Project 2 -->
-            <div class="project-card">
-                <div class="device-mockup">
-                    <div class="phone-frame">
-                        <div class="phone-screen">
-                            <img src="project_2.jpg" alt="Task Manager App" class="app-screenshot">
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="device-mockup">
+                        <div class="phone-frame">
+                            <div class="phone-screen">
+                                <img src="project_1.jpg" alt="Safe Track App" class="app-screenshot">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Safe Track</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Kotlin</span>
+                            <span class="project-tag">Google Maps API</span>
+                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">Express.js</span>
+                            <span class="project-tag">MongoDB</span>
+                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">WebSocket</span>
+                            <span class="project-tag">real-time GPS</span>
+                        </div>
+                        <p>Safe Track is designed to provide enhanced security and peace of mind for women while
+                            traveling. It features real-time location tracking, route monitoring, and emergency alerts
+                            to trusted contacts. The app includes a "geoguessing" feature that tracks the user's route
+                            and triggers alerts if they deviate or remain stationary for too long. Additional safety
+                            features include a "Time Threshold Alert" for delays, smart route deviation detection, and
+                            an emergency response system if the user is unresponsive. It also offers a "Fake Shutdown
+                            Mode" to secretly send emergency data in case of an emergency.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/harshGALIYAWALA/Safe-Track" target="_blank" class="btn">
+                                <i class="fab fa-google-play"></i> View on Play Store
+                            </a>
+                            <a href="https://github.com/harshGALIYAWALA/Safe-Track" target="_blank" class="btn-outline">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="project-content">
-                    <h3>Dish FLow </h3>
-                    <div class="project-tags">
-                        <span class="project-tag">Kotlin</span>
-                        <span class="project-tag">Firebase</span>
-                        <span class="project-tag">MVVM</span>
-                        <span class="project-tag">Cloud Storage</span>
-                    </div>
-                    <p>Dish Flow allows users to easily browse menus, place orders, and have food delivered to their doorstep. It features a simple and intuitive interface for browsing different restaurants, selecting items, and tracking the order in real-time. The app supports payment processing, order status updates, and a seamless user experience from start to finish.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/harshGALIYAWALA/Dish-Flow" target="_blank" class="btn"><i class="fab fa-google-play"></i> View on Play Store</a>
-                        <a href="https://github.com/harshGALIYAWALA/Dish-Flow" target="_blank" class="btn-outline"><i class="fab fa-github"></i> Source Code</a>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Project 3 -->
-            <div class="project-card">
-                <div class="device-mockup">
-                    <div class="phone-frame">
-                        <div class="phone-screen">
-                            <img src="project_3.png" alt="Social Media Dashboard" class="app-screenshot">
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="device-mockup">
+                        <div class="phone-frame">
+                            <div class="phone-screen">
+                                <img src="project_2.jpg" alt="Dish Flow App" class="app-screenshot">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Dish Flow</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Kotlin</span>
+                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">MVVM</span>
+                            <span class="project-tag">Cloud Storage</span>
+                        </div>
+                        <p>Dish Flow allows users to easily browse menus, place orders, and have food delivered to their
+                            doorstep. It features a simple and intuitive interface for browsing different restaurants,
+                            selecting items, and tracking the order in real-time. The app supports payment processing,
+                            order status updates, and a seamless user experience from start to finish.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/harshGALIYAWALA/Dish-Flow" target="_blank" class="btn">
+                                <i class="fab fa-google-play"></i> View on Play Store
+                            </a>
+                            <a href="https://github.com/harshGALIYAWALA/Dish-Flow" target="_blank" class="btn-outline">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="project-content">
-                    <h3>Node Dash</h3>
-                    <div class="project-tags">
-                        <span class="project-tag">Java</span>
-                        <span class="project-tag">Retrofit</span>
-                        <span class="project-tag">APIs</span>
-                        <span class="project-tag">Node.js</span>
-                        <span class="project-tag">Express.js</span>
-                        <span class="project-tag">MongoDB</span>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="device-mockup">
+                        <div class="phone-frame">
+                            <div class="phone-screen">
+                                <img src="project_3.png" alt="Node Dash App" class="app-screenshot">
+                            </div>
+                        </div>
                     </div>
-                    <p>Node Dash is a simple and efficient tool for capturing ideas, to-do lists, and important information on the go. It allows users to create, edit, organize, and categorize notes with ease. With features like search, color-coded labels, and optional reminders, the app helps users stay organized and productive. Notes are saved locally or synced to the cloud for easy access across devices.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/harshGALIYAWALA/NodeDash" target="_blank" class="btn"><i class="fab fa-google-play"></i> View on Play Store</a>
-                        <a href="https://github.com/harshGALIYAWALA/NodeDash" target="_blank" class="btn-outline"><i class="fab fa-github"></i> Source Code</a>
+                    <div class="project-content">
+                        <h3>Node Dash</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Java</span>
+                            <span class="project-tag">Retrofit</span>
+                            <span class="project-tag">APIs</span>
+                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">Express.js</span>
+                            <span class="project-tag">MongoDB</span>
+                        </div>
+                        <p>Node Dash is a simple and efficient tool for capturing ideas, to-do lists, and important
+                            information on the go. It allows users to create, edit, organize, and categorize notes with
+                            ease. With features like search, color-coded labels, and optional reminders, the app helps
+                            users stay organized and productive. Notes are saved locally or synced to the cloud for easy
+                            access across devices.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/harshGALIYAWALA/NodeDash" target="_blank" class="btn">
+                                <i class="fab fa-google-play"></i> View on Play Store
+                            </a>
+                            <a href="https://github.com/harshGALIYAWALA/NodeDash" target="_blank" class="btn-outline">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-    <!-- Contact Section -->
+    <!-- Enhanced Contact Section with Modern Theme -->
     <section id="contact" class="contact">
         <div class="container">
             <h2>Get In Touch</h2>
-            <div class="contact-form">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Your Name">
-                </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Your Email">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Subject">
-                </div>
-                <div class="form-group">
-                    <textarea class="form-control" placeholder="Your Message"></textarea>
-                </div>
-                <button type="submit" class="btn">Send Message</button>
+            <div class="success-message" id="successMessage">
+                Thank you for your message! We'll get back to you soon.
             </div>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                    <div class="form-highlight"></div>
+                    <div class="error-message" id="nameError">Please enter your name</div>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                    <div class="form-highlight"></div>
+                    <div class="error-message" id="emailError">Please enter a valid email address</div>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                    <div class="form-highlight"></div>
+                    <div class="error-message" id="subjectError">Please enter a subject</div>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" id="message" placeholder="Your Message" required></textarea>
+                    <div class="form-highlight"></div>
+                    <div class="error-message" id="messageError">Please enter your message</div>
+                </div>
+                <button type="submit" class="btn" id="submitBtn">
+                    <span>Send Message</span>
+                    <div class="spinner"></div>
+                    <div class="btn-highlight"></div>
+                </button>
+            </form>
         </div>
     </section>
 
@@ -226,39 +412,23 @@
     <footer class="footer">
         <div class="container">
             <div class="social-links">
-                <a href="https://github.com/harshGALIYAWALA" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/harsh-galiyawala-ba0429289/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/_its_harsh_100/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/harshGALIYAWALA" target="_blank" class="social-link"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/harsh-galiyawala-ba0429289/" target="_blank" class="social-link"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/_its_harsh_100/" target="_blank" class="social-link"><i
+                        class="fab fa-instagram"></i></a>
             </div>
             <p class="copyright">&copy; 2025 Harsh. All Rights Reserved.</p>
         </div>
     </footer>
 
     <!-- JS for active nav link highlighting -->
-    <script>
-        // Get all nav links
-        const navLinks = document.querySelectorAll('.nav-link');
-        
-        // Add active class to current nav link based on scroll position
-        window.addEventListener('scroll', function() {
-            let current = '';
-            
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').substring(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
+    <script src="script.js">
+        (function () {
+            emailjs.init("YOUR_USER_ID"); // Replace with your actual EmailJS user ID
+        })();
     </script>
 </body>
+
 </html>
